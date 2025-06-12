@@ -1,0 +1,18 @@
+{
+  "toolkitVersion": "0.11.0",
+  "sdkVersion": "1.6.12",
+  "enableVConsole": "open",
+  "appMenuEnable": true,
+  "sdkKey": "7zMK3puw6k",
+  "sdkKeySecret": "cV9bGcfqqBAtylNs-bcXZw",
+  "packageName": "com.enterprise.jpushdemo",
+  "miniModuleId": "wx3e77298d8cecc31f",
+  "useExtendedSdk": {},
+  "version": "0.0.1",
+  "versionCode": 100,
+  "usePluginSdk": {},
+  "scheme": "__placeholder__",
+  "targetSdkVersion": 29,
+  "privacyPopup": true,
+  "splashscreen": false
+}

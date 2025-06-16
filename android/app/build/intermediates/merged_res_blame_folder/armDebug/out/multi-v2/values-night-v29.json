@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/shunihuang/WeChatProjects/miniapp-3/android/app/build/intermediates/incremental/mergeArmDebugResources/merged.dir/values-night-v29/values-night-v29.xml",
+            "map": [
+                {
+                    "source": "/Users/shunihuang/.gradle/caches/transforms-2/files-2.1/ffd0cb5e0d122a78943d9805c0dbf9ab/wxa-standalone-open-runtime-SaaA-plugin-sdk-1.0.10/res/values-night-v29/values-night-v29.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "744"
+                    }
+                }
+            ]
+        }
+    ]
+}

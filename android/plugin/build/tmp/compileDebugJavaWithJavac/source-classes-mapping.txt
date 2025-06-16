@@ -1,0 +1,2 @@
+com/donut/wx324c7e239a81ad0f/BuildConfig.java
+ com.donut.wx324c7e239a81ad0f.BuildConfig

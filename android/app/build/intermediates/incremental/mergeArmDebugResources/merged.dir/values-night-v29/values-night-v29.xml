@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WxaAppContainerTheme" parent="Theme.LuggageApp.Standalone">
+        <item name="android:isLightTheme">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="radio_selector">@drawable/round_selector</item>
+        <item name="checkbox_selector">@drawable/wmpf_checkbox_btn</item>
+    </style>
+</resources>

@@ -68,6 +68,8 @@ if (!file("$libsDir/com/tencent/luggage/wxa-standalone-open-runtime-SaaA-plugin-
 
         compileOnly("com.tencent.luggage:wxa-standalone-open-runtime-SaaA-plugin-sdk:$saaaSDKVersionDepend") {}
 
+        implementation 'cn.jiguang.sdk:jpush:5.7.0'
+
     }
 
     clearDuplicatedJniLibs([
@@ -78,7 +80,7 @@ if (!file("$libsDir/com/tencent/luggage/wxa-standalone-open-runtime-SaaA-plugin-
     ])
 
     project.ext.pomDeps = [
-
+            "cn.jiguang.sdk:jpush": "5.7.0"
     ]
 
 

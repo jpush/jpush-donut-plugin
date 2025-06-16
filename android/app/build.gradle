@@ -31,6 +31,8 @@ android {
 
         manifestPlaceholders = [
             MINIAPP_SCHEME : miniAppConfig.scheme,
+            JPUSH_APPKEY : "b266cd5c8544ba09b23733e3", //JPush 上注册的包名对应的 Appkey.
+            JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
        ]
     }
 

@@ -1894,6 +1894,10 @@
     <string name="html_webview_native_oauth_waiting">正在登录中...</string>
     <string name="icons_outlined_refresh">重新进入\n小程序</string>
     <string name="item_selected">已选中</string>
+    <string name="jg_channel_name_p_default">NORMAL</string>
+    <string name="jg_channel_name_p_high">HIGH</string>
+    <string name="jg_channel_name_p_low">LOW</string>
+    <string name="jg_channel_name_p_min">LOW</string>
     <string name="jump_to_settings">去设置</string>
     <string name="key_step_logger_analyser_detail_title">详情</string>
     <string name="key_step_logger_analyser_list_title">列表</string>
@@ -3690,6 +3694,25 @@
         <item name="android:textSize">@dimen/HeadlineTextSize</item>
         <item name="android:lineSpacingMultiplier">1.4</item>
         <item name="android:textColor">@color/FG_0</item>
+    </style>
+    <style name="JPushDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="JPushTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
     <style name="MMActionBar.SubTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/actionbar_subtitle_color</item>

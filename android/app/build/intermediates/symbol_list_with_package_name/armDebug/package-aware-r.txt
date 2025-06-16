@@ -2322,6 +2322,15 @@ drawable input_bg
 drawable input_bg_full_screen
 drawable input_gray_bg
 drawable input_gray_radius_4_bg
+drawable jpush_btn_blue_bg
+drawable jpush_btn_grey_bg
+drawable jpush_cancel_btn_bg
+drawable jpush_close
+drawable jpush_ic_richpush_actionbar_back
+drawable jpush_ic_richpush_actionbar_divider
+drawable jpush_interstitial_bg
+drawable jpush_richpush_btn_selector
+drawable jpush_richpush_progressbar
 drawable keyboard_delete
 drawable list_item_bottom_line
 drawable list_item_normal
@@ -2662,6 +2671,7 @@ id action_option_icon_right
 id action_option_text
 id action_search_icon
 id action_text
+id actionbarLayoutId
 id actionbar_album_chooser
 id actionbar_capsule_area
 id actionbar_capsule_area_placeholder
@@ -2811,11 +2821,14 @@ id auto_focus
 id avatar_image
 id avatar_iv
 id background
+id banner
+id banner_content
 id bar_ll
 id bar_root
 id barrier
 id beginning
 id bg_sample
+id bg_view
 id blocking
 id bottom
 id bottom_label_placeholder
@@ -2839,6 +2852,7 @@ id bt_picker_cancel
 id bt_picker_confirm
 id btnCancel
 id btnSubmit
+id btn_countdown
 id btn_double_down
 id btn_double_left
 id btn_double_right
@@ -2846,7 +2860,10 @@ id btn_double_up
 id btn_ll
 id btn_ll_up_down
 id btn_ok
+id btn_one
+id btn_parent_view
 id btn_single
+id btn_two
 id buttonPanel
 id button_area
 id button_group
@@ -2909,7 +2926,9 @@ id content_desc_text
 id content_rl
 id content_scroll
 id content_text
+id content_view
 id coordinator
+id countdown_container
 id current_time
 id cursor_iv
 id cursor_iv_top
@@ -3001,6 +3020,7 @@ id force_notify_iv
 id force_notify_layout
 id forever
 id fragment_container_view_tag
+id frame
 id ghost_view
 id glide_custom_view_target_tag
 id gone
@@ -3028,11 +3048,18 @@ id icon_iv
 id ifRoom
 id image
 id imageView
+id image_close
 id image_iv
+id image_only
 id image_prospect
 id image_right_iv
+id image_small
 id image_status_icon
 id image_title_detail_icon
+id imgRichpushBtnBack
+id imgView
+id img_bottom_close
+id img_top_close
 id info
 id invisible
 id italic
@@ -3068,6 +3095,7 @@ id login_bottom_buttons
 id login_reject
 id login_title
 id main_switch
+id margeview
 id marker_icon
 id marker_layout
 id maskRootView
@@ -3188,6 +3216,7 @@ id picker_toolbar
 id pickers
 id pin
 id play_btn
+id popLayoutId
 id pop_bubble
 id pre_song
 id preference_bottom
@@ -3206,6 +3235,7 @@ id progress_dialog_icon
 id progress_dialog_msg
 id progress_horizontal
 id progress_icon
+id pushPrograssBar
 id qr_alert_icon
 id qr_alert_message
 id qr_display_alert_layer
@@ -3250,6 +3280,7 @@ id right_prospect
 id right_rl
 id right_side
 id right_text
+id rlRichpushTitleBar
 id rl_text_container
 id root
 id root_content
@@ -3399,9 +3430,11 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id text_content
 id text_input_password_toggle
 id text_ly
 id text_prospect
+id text_title
 id text_tv_one
 id text_tv_two
 id text_view_callback
@@ -3457,6 +3490,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvRichpushTitle
 id tvTitle
 id tv_explanation
 id tv_image_index
@@ -3507,6 +3541,7 @@ id wmpf_splash_game_hint
 id wmpf_splash_icon
 id wrap
 id wrap_content
+id wvPopwin
 id wxa_info_ll
 id wxa_progress_dialog_indeterminate_loading
 id wxa_progress_dialog_msg
@@ -3693,6 +3728,11 @@ layout include_pickerview_topbar
 layout item_layout_preference_auth
 layout item_setting_preference_base
 layout item_setting_preference_icon
+layout jpush_banner
+layout jpush_full
+layout jpush_interstitial
+layout jpush_popwin_layout
+layout jpush_webview_layout
 layout layout
 layout layout_app_page_bottom_sheet
 layout layout_app_page_bottom_sheet_menu_item
@@ -4268,6 +4308,10 @@ string html_webview_native_oauth_failed
 string html_webview_native_oauth_waiting
 string icons_outlined_refresh
 string item_selected
+string jg_channel_name_p_default
+string jg_channel_name_p_high
+string jg_channel_name_p_low
+string jg_channel_name_p_min
 string jump_to_settings
 string key_step_logger_analyser_detail_title
 string key_step_logger_analyser_list_title
@@ -4672,6 +4716,8 @@ style GreenSmallButton
 style GroupTitleTextStyle
 style HalfBottomDialog
 style HeadlineTextStyle
+style JPushDialogStyle
+style JPushTheme
 style MMActionBar_SubTitleTextStyle
 style MMActionBar_TitleTextStyle
 style MMBriefText

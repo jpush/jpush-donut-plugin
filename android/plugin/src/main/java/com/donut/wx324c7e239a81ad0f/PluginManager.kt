@@ -7,7 +7,6 @@ import com.tencent.luggage.wxa.SaaA.plugin.SyncJsApi
 import com.tencent.luggage.wxa.SaaA.plugin.AsyncJsApi
 import org.json.JSONObject
 
-
 class TestNativePlugin: NativePluginBase(), NativePluginInterface {
     private val TAG = "TestNativePlugin"
 

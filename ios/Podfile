@@ -1,0 +1,3 @@
+target 'wx324c7e239a81ad0f' do
+  pod "MyPlugin", :path => "."
+end

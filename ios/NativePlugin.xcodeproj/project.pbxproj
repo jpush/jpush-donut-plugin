@@ -103,7 +103,6 @@
 				BB2E8CAACE2F450224FF0CC5 /* Pods-wx324c7e239a81ad0f.debug.xcconfig */,
 				38FEAEE9520F8F0BE4182C1F /* Pods-wx324c7e239a81ad0f.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -378,7 +377,10 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+				OTHER_LDFLAGS = (
+					"-Wl,-undefined,dynamic_lookup",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.jiguang.hxhg.testplugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -417,7 +419,10 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-Wl,-undefined,dynamic_lookup";
+				OTHER_LDFLAGS = (
+					"-Wl,-undefined,dynamic_lookup",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.jiguang.hxhg.testplugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

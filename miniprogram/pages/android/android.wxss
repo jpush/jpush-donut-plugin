@@ -1,1 +1,141 @@
 /* pages/android/android.wxss */
+page {
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.scroll-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 25vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container {
+  padding: 20rpx;
+  padding-bottom: 40rpx;
+  min-height: 100%;
+}
+
+.quick-start-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin: 20rpx 0;
+  text-align: center;
+}
+
+.quick-start-content {
+  background: #f8f8f8;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin: 20rpx 0;
+}
+
+.quick-start-content-item {
+  display: flex;
+  margin: 10rpx 0;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.quick-start-content-item-text {
+  margin-left: 10rpx;
+}
+
+.btn {
+  margin: 10rpx 0;
+  background: #07c160;
+  color: #fff;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  line-height: 2.2;
+  padding: 0 20rpx;
+}
+
+.section {
+  margin: 20rpx 0;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.fixed-log-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 20rpx;
+  border-top: 1rpx solid #eee;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.log-container {
+  flex: 1;
+  background: #f8f8f8;
+  border-radius: 8rpx;
+  padding: 10rpx;
+  overflow-y: auto;
+}
+
+.log-item {
+  font-size: 24rpx;
+  color: #666;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #eee;
+  word-break: break-all;
+}
+
+.log-item:last-child {
+  border-bottom: none;
+}
+
+.log-time {
+  color: #999;
+  font-size: 22rpx;
+  margin-bottom: 4rpx;
+}
+
+.log-method {
+  color: #07c160;
+  font-weight: bold;
+  margin-bottom: 4rpx;
+}
+
+.log-result {
+  color: #666;
+  background: #fff;
+  padding: 6rpx;
+  border-radius: 4rpx;
+  margin-top: 4rpx;
+}

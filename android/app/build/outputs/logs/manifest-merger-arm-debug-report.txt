@@ -9,7 +9,7 @@ ADDED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/Andro
 INJECTED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:2:1-61:12
 INJECTED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:2:1-61:12
 INJECTED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:2:1-61:12
-MERGED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
+MERGED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-34:12
 MERGED from [com.tencent.luggage:wxa-standalone-open-runtime-SaaA-plugin-sdk:1.0.10] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/ffd0cb5e0d122a78943d9805c0dbf9ab/wxa-standalone-open-runtime-SaaA-plugin-sdk-1.0.10/AndroidManifest.xml:2:1-424:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/4bf4c11ada97dec560309a2ef758ac43/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/c73919289459b82c9c10899e58d0fe91/material-1.0.0/AndroidManifest.xml:17:1-24:12
@@ -57,7 +57,7 @@ MERGED from [androidx.tracing:tracing:1.0.0] /Users/shunihuang/.gradle/caches/tr
 MERGED from [androidx.multidex:multidex:2.0.1] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/4ae9019a162204fcdcf73d7b66b70db3/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.tencent.wcdb:wcdb-android:1.1-19] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/1cecd7fa9725bcb871b1e449a83f3ab0/wcdb-android-1.1-19/AndroidManifest.xml:2:1-11:12
 MERGED from [com.makeramen:roundedimageview:2.3.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/c667e74b48da43cd6288a0b96e68a08e/roundedimageview-2.3.0/AndroidManifest.xml:2:1-9:12
-MERGED from [cn.jiguang.sdk:jcore:5.0.2] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/994b7a016f860bcd76df1833492c7a71/jcore-5.0.2/AndroidManifest.xml:2:1-14:12
+MERGED from [cn.jiguang.sdk:jcore:5.0.4] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/52c601192763043f691618f5c4b0410d/jcore-5.0.4/AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/a401dbc0015d520c26e085652adeb16b/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:2:1-61:12
 INJECTED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:2:1-61:12
@@ -178,8 +178,8 @@ MERGED from [com.tencent.wcdb:wcdb-android:1.1-19] /Users/shunihuang/.gradle/cac
 MERGED from [com.tencent.wcdb:wcdb-android:1.1-19] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/1cecd7fa9725bcb871b1e449a83f3ab0/wcdb-android-1.1-19/AndroidManifest.xml:7:5-9:41
 MERGED from [com.makeramen:roundedimageview:2.3.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/c667e74b48da43cd6288a0b96e68a08e/roundedimageview-2.3.0/AndroidManifest.xml:7:5-43
 MERGED from [com.makeramen:roundedimageview:2.3.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/c667e74b48da43cd6288a0b96e68a08e/roundedimageview-2.3.0/AndroidManifest.xml:7:5-43
-MERGED from [cn.jiguang.sdk:jcore:5.0.2] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/994b7a016f860bcd76df1833492c7a71/jcore-5.0.2/AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jcore:5.0.2] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/994b7a016f860bcd76df1833492c7a71/jcore-5.0.2/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:5.0.4] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/52c601192763043f691618f5c4b0410d/jcore-5.0.4/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:5.0.4] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/52c601192763043f691618f5c4b0410d/jcore-5.0.4/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/a401dbc0015d520c26e085652adeb16b/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/a401dbc0015d520c26e085652adeb16b/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 INJECTED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:5:5-59
@@ -248,8 +248,8 @@ ADDED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/Andro
 		ADDED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:14:18-47
 application
 ADDED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:17:5-59:19
-MERGED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-11:19
-MERGED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-11:19
+MERGED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-32:19
+MERGED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-32:19
 MERGED from [com.tencent.luggage:wxa-standalone-open-runtime-SaaA-plugin-sdk:1.0.10] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/ffd0cb5e0d122a78943d9805c0dbf9ab/wxa-standalone-open-runtime-SaaA-plugin-sdk-1.0.10/AndroidManifest.xml:93:5-422:19
 MERGED from [com.tencent.luggage:wxa-standalone-open-runtime-SaaA-plugin-sdk:1.0.10] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/ffd0cb5e0d122a78943d9805c0dbf9ab/wxa-standalone-open-runtime-SaaA-plugin-sdk-1.0.10/AndroidManifest.xml:93:5-422:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/4bf4c11ada97dec560309a2ef758ac43/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
@@ -266,8 +266,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shun
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/35cfa7d509722fc9b7d2ef045ea157a4/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/bde125960cc2d7e051ed194950ed1240/gifdecoder-4.10.0/AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/bde125960cc2d7e051ed194950ed1240/gifdecoder-4.10.0/AndroidManifest.xml:9:5-20
-MERGED from [cn.jiguang.sdk:jcore:5.0.2] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/994b7a016f860bcd76df1833492c7a71/jcore-5.0.2/AndroidManifest.xml:11:5-12:19
-MERGED from [cn.jiguang.sdk:jcore:5.0.2] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/994b7a016f860bcd76df1833492c7a71/jcore-5.0.2/AndroidManifest.xml:11:5-12:19
+MERGED from [cn.jiguang.sdk:jcore:5.0.4] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/52c601192763043f691618f5c4b0410d/jcore-5.0.4/AndroidManifest.xml:11:5-12:19
+MERGED from [cn.jiguang.sdk:jcore:5.0.4] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/52c601192763043f691618f5c4b0410d/jcore-5.0.4/AndroidManifest.xml:11:5-12:19
 	android:requestLegacyExternalStorage
 		ADDED from [com.tencent.luggage:wxa-standalone-open-runtime-SaaA-plugin-sdk:1.0.10] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/ffd0cb5e0d122a78943d9805c0dbf9ab/wxa-standalone-open-runtime-SaaA-plugin-sdk-1.0.10/AndroidManifest.xml:96:9-52
 	android:appComponentFactory
@@ -346,6 +346,48 @@ ADDED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/Andro
 		ADDED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:57:13-36
 	android:name
 		ADDED from /Users/shunihuang/WeChatProjects/miniapp-3/android/app/src/main/AndroidManifest.xml:55:13-53
+service#com.donut.wx324c7e239a81ad0f.JPushCustomService
+ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-20:19
+	android:process
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-40
+	android:enabled
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-35
+	android:exported
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+	android:stopWithTask
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-40
+	android:name
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-75
+intent-filter#action:name:cn.jiguang.user.service.action
+ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:29
+action#cn.jiguang.user.service.action
+ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-73
+	android:name
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:25-70
+receiver#com.donut.wx324c7e239a81ad0f.JPushModuleReceiver
+ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:9-31:20
+	android:enabled
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-35
+	android:exported
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-76
+intent-filter#action:name:cn.jpush.android.intent.RECEIVER_MESSAGE+category:name:${applicationId}
+ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-30:29
+intent-filter#action:name:cn.jpush.android.intent.RECEIVER_MESSAGE+category:name:com.enterprise.jpushdemo
+ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-30:29
+action#cn.jpush.android.intent.RECEIVER_MESSAGE
+ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:17-83
+	android:name
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:25-80
+category#${applicationId}
+ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:17-61
+	android:name
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:27-58
+category#com.enterprise.jpushdemo
+ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:17-61
+	android:name
+		ADDED from [:plugin] /Users/shunihuang/WeChatProjects/miniapp-3/android/plugin/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:27-58
 intent#action:name:android.media.action.IMAGE_CAPTURE
 ADDED from [com.tencent.luggage:wxa-standalone-open-runtime-SaaA-plugin-sdk:1.0.10] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/ffd0cb5e0d122a78943d9805c0dbf9ab/wxa-standalone-open-runtime-SaaA-plugin-sdk-1.0.10/AndroidManifest.xml:13:9-16:18
 action#android.media.action.IMAGE_CAPTURE
@@ -1102,14 +1144,6 @@ action#cn.jpush.android.ui.PopWinActivity
 ADDED from [cn.jiguang.sdk:jpush:5.7.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/20e818c4db6dbbc370bda0fd1d67d00d/jpush-5.7.0/AndroidManifest.xml:39:17-77
 	android:name
 		ADDED from [cn.jiguang.sdk:jpush:5.7.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/20e818c4db6dbbc370bda0fd1d67d00d/jpush-5.7.0/AndroidManifest.xml:39:25-74
-category#${applicationId}
-ADDED from [cn.jiguang.sdk:jpush:5.7.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/20e818c4db6dbbc370bda0fd1d67d00d/jpush-5.7.0/AndroidManifest.xml:41:17-61
-	android:name
-		ADDED from [cn.jiguang.sdk:jpush:5.7.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/20e818c4db6dbbc370bda0fd1d67d00d/jpush-5.7.0/AndroidManifest.xml:41:27-58
-category#com.enterprise.jpushdemo
-ADDED from [cn.jiguang.sdk:jpush:5.7.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/20e818c4db6dbbc370bda0fd1d67d00d/jpush-5.7.0/AndroidManifest.xml:41:17-61
-	android:name
-		ADDED from [cn.jiguang.sdk:jpush:5.7.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/20e818c4db6dbbc370bda0fd1d67d00d/jpush-5.7.0/AndroidManifest.xml:41:27-58
 activity#cn.jpush.android.ui.PushActivity
 ADDED from [cn.jiguang.sdk:jpush:5.7.0] /Users/shunihuang/.gradle/caches/transforms-2/files-2.1/20e818c4db6dbbc370bda0fd1d67d00d/jpush-5.7.0/AndroidManifest.xml:46:9-57:20
 	android:exported

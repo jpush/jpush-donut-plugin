@@ -152,6 +152,29 @@
             android:name="com.enterprise.jpushdemo.wxapi.WXPayEntryActivity"
             android:exported="true"
             android:launchMode="singleTask" />
+
+        <service
+            android:name="com.donut.wx324c7e239a81ad0f.JPushCustomService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore"
+            android:stopWithTask="true" >
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.donut.wx324c7e239a81ad0f.JPushModuleReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVER_MESSAGE" />
+
+                <category android:name="com.enterprise.jpushdemo" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="com.tencent.luggage.wxa.SaaA.app.SaaANetworkErrorActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" >

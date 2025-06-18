@@ -1,19 +1,75 @@
 <!--pages/android/android.wxml-->
-<view class="container">
+<view class="page-container">
+  <scroll-view 
+    scroll-y 
+    class="scroll-content"
+    scroll-into-view="{{scrollToView}}"
+    scroll-with-animation="true"
+    enhanced="true"
+    show-scrollbar="true"
+    bounces="true">
+    <view class="container" id="top">
+      <view class="quick-start-title">Android 插件快速开始</view>
 
-<view class="quick-start-title">Android 插件快速开始</view>
+      <view class="container quick-start-content">
+        <view wx:for="{{quickStartContents}}" class="quick-start-content-item">
+          <view>{{index+1}}.</view>
+          <view class="quick-start-content-item-text">{{item}}</view>
+        </view>
+      </view>
 
-<view class="container quick-start-content">
-  <view wx:for="{{quickStartContents}}" class="quick-start-content-item">
-    <view>{{index+1}}.</view>
-    <view class="quick-start-content-item-text">{{item}}</view>
+      <view class="section">
+        <view class="section-title">JPush 插件方法</view>
+        <view class="button-group">
+          <button bindtap="onLoadPlugin" class="btn">加载插件</button>
+          <button bindtap="setupJPush" class="btn">初始化JPush</button>
+          <button bindtap="getRegistrationID" class="btn">获取RegistrationID</button>
+          <button bindtap="setBadge" class="btn">设置角标</button>
+          <button bindtap="setLogLevel" class="btn">设置日志级别</button>
+          <button bindtap="setSmartPushEnable" class="btn">设置用户分群推送</button>
+          <button bindtap="pageEnterTo" class="btn">进入页面</button>
+          <button bindtap="pageLeave" class="btn">离开页面</button>
+        </view>
+      </view>
+
+      <view class="section">
+        <view class="section-title">标签操作</view>
+        <view class="button-group">
+          <button bindtap="addTags" class="btn">添加标签</button>
+          <button bindtap="setTags" class="btn">设置标签</button>
+          <button bindtap="getAllTags" class="btn">获取所有标签</button>
+          <button bindtap="checkTagBindState" class="btn">检查标签绑定状态</button>
+          <button bindtap="deleteTags" class="btn">删除标签</button>
+        </view>
+      </view>
+
+      <view class="section">
+        <view class="section-title">别名操作</view>
+        <view class="button-group">
+          <button bindtap="setAlias" class="btn">设置别名</button>
+          <button bindtap="deleteAlias" class="btn">删除别名</button>
+          <button bindtap="getAlias" class="btn">获取别名</button>
+        </view>
+      </view>
+
+      <view class="section">
+        <view class="section-title">通知操作</view>
+        <view class="button-group">
+          <button bindtap="checkNotificationAuthorization" class="btn">检查通知权限</button>
+          <button bindtap="openSettings" class="btn">打开设置</button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="fixed-log-section">
+    <view class="section-title">方法调用日志</view>
+    <scroll-view scroll-y class="log-container">
+      <view wx:for="{{logMessages}}" wx:key="index" class="log-item">
+        <view class="log-time">{{item.time}}</view>
+        <view class="log-method">{{item.method}}</view>
+        <view class="log-result">{{item.result}}</view>
+      </view>
+    </scroll-view>
   </view>
-</view>
-
-<button bindtap="onLoadPlugin" class="btn">点击加载多端插件</button>
-<button bindtap="onUsePlugin" class="btn">点击调用多端插件</button>
-
-
-<view class="quick-start-tips" bindtap="copyLink">更多 Android 插件开发指引可点击 🔗  复制链接在浏览器打开查看</view>
-
 </view>

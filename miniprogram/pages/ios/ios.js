@@ -165,7 +165,8 @@ Page({
       return
     }
     myPlugin.addTags({
-      tags: ['tag1', 'tag2']
+      tags: ['tag1', 'tag2'],
+      sequence: 1
     }, (res) => {
       this.addLog('添加标签', res)
     })
@@ -178,7 +179,8 @@ Page({
       return
     }
     myPlugin.setTags({
-      tags: ['tag1', 'tag2']
+      tags: ['tag1', 'tag2'],
+      sequence: 2
     }, (res) => {
       this.addLog('设置标签', res)
     })
@@ -190,7 +192,9 @@ Page({
       this.addLog('获取所有标签', '插件未加载')
       return
     }
-    myPlugin.getAllTags({},(res) => {
+    myPlugin.getAllTags({
+      sequence: 3
+    },(res) => {
       this.addLog('获取所有标签', res)
     })
   },
@@ -202,7 +206,8 @@ Page({
       return
     }
     myPlugin.checkTagBindState({
-      tag: 'tag1'
+      tag: 'tag1',
+      sequence: 4
     }, (res) => {
       this.addLog('检查标签绑定状态', res)
     })
@@ -215,7 +220,8 @@ Page({
       return
     }
     myPlugin.deleteTags({
-      tags: ['tag1', 'tag2']
+      tags: ['tag1', 'tag2'],
+      sequence: 5
     }, (res) => {
       this.addLog('删除标签', res)
     })
@@ -229,7 +235,8 @@ Page({
       return
     }
     myPlugin.setAlias({
-      alias: 'test_alias'
+      alias: 'test_alias',
+      sequence: 6
     }, (res) => {
       this.addLog('设置别名', res)
     })
@@ -241,7 +248,9 @@ Page({
       this.addLog('删除别名', '插件未加载')
       return
     }
-    myPlugin.deleteAlias({},(res) => {
+    myPlugin.deleteAlias({
+      sequence: 7
+    },(res) => {
       this.addLog('删除别名', res)
     })
   },
@@ -252,7 +261,9 @@ Page({
       this.addLog('获取别名', '插件未加载')
       return
     }
-    myPlugin.getAlias({},(res) => {
+    myPlugin.getAlias({
+      sequence: 8
+    },(res) => {
       this.addLog('获取别名', res)
     })
   },

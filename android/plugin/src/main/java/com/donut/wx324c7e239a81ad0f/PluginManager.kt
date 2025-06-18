@@ -31,9 +31,9 @@ class MsgReceiver(private val nativePlugin: TestNativePlugin) : BroadcastReceive
     override fun onReceive(context: Context?, intent: Intent) {
         Log.d(TAG, "onReceive called with action: ${intent.action}")
         
-        val event = intent.getStringExtra(JConstants.EVENT_NAME)
+        val eventName = intent.getStringExtra(JConstants.EVENT_NAME)
         val dataStr = intent.getStringExtra(JConstants.EVENT_DATA)
-        Log.d(TAG, "onReceive - event: $event, dataStr: $dataStr")
+        Log.d(TAG, "onReceive - event: $eventName, dataStr: $dataStr")
         
         if (!dataStr.isNullOrEmpty()) {
             try {
@@ -42,8 +42,11 @@ class MsgReceiver(private val nativePlugin: TestNativePlugin) : BroadcastReceive
                 jsonObject.keys().forEach { key ->
                     map[key] = jsonObject.get(key)
                 }
-                Log.d(TAG, "Sending event to plugin: $event, data: $map")
-                this.nativePlugin.sendMiniPluginEventOut(map)
+                val hashMap = HashMap<String, Any>()
+                hashMap[JConstants.EVENT_NAME] = eventName ?: ""
+                hashMap[JConstants.EVENT_DATA] = map
+                Log.d(TAG, "Sending event to plugin: $eventName, data: $hashMap")
+                this.nativePlugin.sendMiniPluginEventOut(hashMap)
             } catch (e: Exception) {
                 Log.e(TAG, "Error parsing JSON data: ${e.message}")
             }
@@ -149,16 +152,18 @@ class JPushMethod {
 //                callback(createErrorResult("tags is required"))
                 return
             }
+            val seq = data?.getInt(JConstants.SEQUENCE) ?: 0
             val tagSet = mutableSetOf<String>()
             for (i in 0 until tags.length()) {
                 tagSet.add(tags.getString(i))
             }
-            JPushInterface.setTags(TestNativePluginApplication.applicationContext, 0, tagSet)
+            JPushInterface.setTags(TestNativePluginApplication.applicationContext, seq, tagSet)
 
         }
 
         fun getAllTags(data: JSONObject?) {
-            JPushInterface.getAllTags(TestNativePluginApplication.applicationContext, 0)
+            val seq = data?.getInt(JConstants.SEQUENCE) ?: 0
+            JPushInterface.getAllTags(TestNativePluginApplication.applicationContext, seq)
         }
 
         fun checkTagBindState(data: JSONObject?) {
@@ -166,8 +171,8 @@ class JPushMethod {
 //                callback(createErrorResult("tag is required"))
                 return
             }
-
-            JPushInterface.checkTagBindState(TestNativePluginApplication.applicationContext, 0, tag);
+            val seq = data?.getInt(JConstants.SEQUENCE) ?: 0
+            JPushInterface.checkTagBindState(TestNativePluginApplication.applicationContext, seq, tag);
         }
 
         fun deleteTags(data: JSONObject?) {
@@ -179,7 +184,8 @@ class JPushMethod {
             for (i in 0 until tags.length()) {
                 tagSet.add(tags.getString(i))
             }
-            JPushInterface.deleteTags(TestNativePluginApplication.applicationContext, 0, tagSet)
+            val seq = data?.getInt(JConstants.SEQUENCE) ?: 0
+            JPushInterface.deleteTags(TestNativePluginApplication.applicationContext, seq, tagSet)
         }
 
         fun setAlias(data: JSONObject?) {
@@ -187,15 +193,18 @@ class JPushMethod {
 //                callback(createErrorResult("alias is required"))
                 return
             }
-            JPushInterface.setAlias(TestNativePluginApplication.applicationContext, 0, alias)
+            val seq = data?.getInt(JConstants.SEQUENCE) ?: 0
+            JPushInterface.setAlias(TestNativePluginApplication.applicationContext, seq, alias)
         }
 
         fun deleteAlias(data: JSONObject?) {
-            JPushInterface.deleteAlias(TestNativePluginApplication.applicationContext,0)
+            val seq = data?.getInt(JConstants.SEQUENCE) ?: 0
+            JPushInterface.deleteAlias(TestNativePluginApplication.applicationContext,seq)
         }
 
         fun getAlias(data: JSONObject?) {
-            JPushInterface.getAlias(TestNativePluginApplication.applicationContext, 0);
+            val seq = data?.getInt(JConstants.SEQUENCE) ?: 0
+            JPushInterface.getAlias(TestNativePluginApplication.applicationContext, seq);
         }
     }
 }

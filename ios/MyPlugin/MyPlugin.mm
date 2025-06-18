@@ -8,6 +8,35 @@ static void initPlugin() {
     [MyPlugin registerPluginAndInit:[[MyPlugin alloc] init]];
 };
 
+
+#define JPUSH_NOTIFICATION_ARRIVED_EVENT    @"onNotificationArrived"
+#define JPUSH_NOTIFICATION_CLICK_EVENT      @"onNotificationClicked"
+#define JPUSH_NOTIFICATION_DELETE_EVENT     @"onNotificationDeleted"
+#define JPUSH_NOTIFICATION_DISMISSED_EVENT  @"onNotificationDismissed"
+#define JPUSH_NOTIFICATION_UNSHOW_EVENT     @"onNotificationUnShow"
+#define JPUSH_CUSTOM_MESSAGE_EVENT          @"onCustomMessage"
+#define JPUSH_LOCAL_NOTIFICATION_EVENT      @"LocalNotificationEvent"
+#define JPUSH_TAG_EVENT                     @"onTagMessage"
+#define JPUSH_ALIAS_EVENT                   @"onAliasMessage"
+#define JPUSH_MOBILE_NUMBER_EVENT           @"MobileNumberEvent"
+#define JPUSH_COMMAND_EVENT                 @"CommandEvent"
+#define JPUSH_INAPP_MESSAGE_SHOW_EVENT      @"onInAppMessageShow"
+#define JPUSH_INAPP_MESSAGE_CLICK_EVENT     @"onInAppMessageClick"
+#define JPUSH_NOTI_IN_MESSAGE_SHOW_EVENT      @"onNotiInMessageShow"
+#define JPUSH_NOTI_IN_MESSAGE_CLICK_EVENT     @"onNotiInMessageClick"
+
+
+#define JPUSH_TAGS             @"tags"
+#define JPUSH_TAG              @"tag"
+#define JPUSH_SEQUENCE         @"sequence"
+#define JPUSH_ALIAS            @"alias"
+#define JPUSH_TAG_ENABLE       @"tagEnable"
+#define JPUSH_CODE             @"code"
+#define JPUSH_MESSAGE_ID       @"messageID"
+#define JPUSH_TITLE            @"title"
+#define JPUSH_CONTENT          @"content"
+#define JPUSH_EXTRAS           @"extras"
+
 @interface MyPlugin ()
 
 @end
@@ -128,88 +157,145 @@ WEAPP_EXPORT_PLUGIN_METHOD_ASYNC(openSettings, @selector(openSettings:withCallba
 
 // 异步方法实现
 - (void)addTags:(NSDictionary *)param withCallback:(WeAppNativePluginCallback)callback {
-    NSArray *tags = param[@"tags"];
+    NSArray *tags = param[JPUSH_TAGS];
+    NSNumber *seqNumber = param[JPUSH_SEQUENCE];
+    NSInteger seq = 0;
+    if (seqNumber) {
+        seq = [seqNumber integerValue];
+    }
     [JPUSHService addTags:[NSSet setWithArray:tags] completion:^(NSInteger iResCode, NSSet *iTags, NSInteger seq) {
-        if (iResCode == 0) {
-            callback(@{@"code": @0, @"message": @"success"});
-        } else {
-            callback(@{@"code": @(iResCode), @"message": @"failed"});
-        }
-    } seq:0];
+        NSDictionary *result = @{
+            JPUSH_CODE: @(iResCode),
+            JPUSH_SEQUENCE: @(seq),
+            JPUSH_TAGS: iTags?:@[]
+        };
+//        callback(@{JPUSH_TAG_EVENT: result});
+        callback(result);
+    } seq:seq];
 }
 
 - (void)setTags:(NSDictionary *)param withCallback:(WeAppNativePluginCallback)callback {
-    NSArray *tags = param[@"tags"];
+    NSArray *tags = param[JPUSH_TAGS];
+    NSNumber *seqNumber = param[JPUSH_SEQUENCE];
+    NSInteger seq = 0;
+    if (seqNumber) {
+        seq = [seqNumber integerValue];
+    }
     [JPUSHService setTags:[NSSet setWithArray:tags] completion:^(NSInteger iResCode, NSSet *iTags, NSInteger seq) {
-        if (iResCode == 0) {
-            callback(@{@"code": @0, @"message": @"success"});
-        } else {
-            callback(@{@"code": @(iResCode), @"message": @"failed"});
-        }
-    } seq:0];
+        NSDictionary *result = @{
+            JPUSH_CODE: @(iResCode),
+            JPUSH_SEQUENCE: @(seq),
+            JPUSH_TAGS: iTags?:@[]
+        };
+//        callback(@{JPUSH_TAG_EVENT: result});
+        callback(result);
+    } seq:seq];
 }
 
 - (void)getAllTags:(NSDictionary *)param withCallback:(WeAppNativePluginCallback)callback {
+    NSNumber *seqNumber = param[JPUSH_SEQUENCE];
+    NSInteger seq = 0;
+    if (seqNumber) {
+        seq = [seqNumber integerValue];
+    }
     [JPUSHService getAllTags:^(NSInteger iResCode, NSSet *iTags, NSInteger seq) {
-        if (iResCode == 0) {
-            callback(@{@"code": @0, @"tags": [iTags allObjects]});
-        } else {
-            callback(@{@"code": @(iResCode), @"message": @"failed"});
-        }
-    } seq:0];
+        NSDictionary *result = @{
+            JPUSH_CODE: @(iResCode),
+            JPUSH_SEQUENCE: @(seq),
+            JPUSH_TAGS: iTags?:@[]
+        };
+//        callback(@{JPUSH_TAG_EVENT: result});
+        callback(result);
+    } seq:seq];
 }
 
 - (void)checkTagBindState:(NSDictionary *)param withCallback:(WeAppNativePluginCallback)callback {
-    NSString *tag = param[@"tag"];
+    NSString *tag = param[JPUSH_TAG];
+    NSNumber *seqNumber = param[JPUSH_SEQUENCE];
+    NSInteger seq = 0;
+    if (seqNumber) {
+        seq = [seqNumber integerValue];
+    }
     [JPUSHService validTag:tag completion:^(NSInteger iResCode, NSSet *iTags, NSInteger seq, BOOL isBind) {
-        if (iResCode == 0) {
-            callback(@{@"code": @0, @"isBind": @(isBind)});
-        } else {
-            callback(@{@"code": @(iResCode), @"message": @"failed"});
-        }
-    } seq:0];
+        NSDictionary *result = @{
+            JPUSH_CODE: @(iResCode),
+            JPUSH_SEQUENCE: @(seq),
+            JPUSH_TAG: tag?:@"",
+            JPUSH_TAG_ENABLE: @(isBind)
+        };
+//        callback(@{JPUSH_TAG_EVENT: result});
+        callback(result);
+    } seq:seq];
 }
 
 - (void)deleteTags:(NSDictionary *)param withCallback:(WeAppNativePluginCallback)callback {
-    NSArray *tags = param[@"tags"];
+    NSArray *tags = param[JPUSH_TAGS];
+    NSNumber *seqNumber = param[JPUSH_SEQUENCE];
+    NSInteger seq = 0;
+    if (seqNumber) {
+        seq = [seqNumber integerValue];
+    }
     [JPUSHService deleteTags:[NSSet setWithArray:tags] completion:^(NSInteger iResCode, NSSet *iTags, NSInteger seq) {
-        if (iResCode == 0) {
-            callback(@{@"code": @0, @"message": @"success"});
-        } else {
-            callback(@{@"code": @(iResCode), @"message": @"failed"});
-        }
-    } seq:0];
+        NSDictionary *result = @{
+            JPUSH_CODE: @(iResCode),
+            JPUSH_SEQUENCE: @(seq),
+            JPUSH_TAGS: iTags?:@[]
+        };
+//        callback(@{JPUSH_TAG_EVENT: result});
+        callback(result);
+    } seq:seq];
 }
 
 - (void)setAlias:(NSDictionary *)param withCallback:(WeAppNativePluginCallback)callback {
-    NSString *alias = param[@"alias"];
+    NSString *alias = param[JPUSH_ALIAS];
+    NSNumber *seqNumber = param[JPUSH_SEQUENCE];
+    NSInteger seq = 0;
+    if (seqNumber) {
+        seq = [seqNumber integerValue];
+    }
     [JPUSHService setAlias:alias completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
-        if (iResCode == 0) {
-            callback(@{@"code": @0, @"message": @"success"});
-        } else {
-            callback(@{@"code": @(iResCode), @"message": @"failed"});
-        }
-    } seq:0];
+        NSDictionary *result = @{
+            JPUSH_CODE: @(iResCode),
+            JPUSH_SEQUENCE: @(seq),
+            JPUSH_ALIAS: iAlias?:@""
+        };
+//        callback(@{JPUSH_ALIAS_EVENT: result});
+        callback(result);
+    } seq:seq];
 }
 
 - (void)deleteAlias:(NSDictionary *)param withCallback:(WeAppNativePluginCallback)callback {
+    NSNumber *seqNumber = param[JPUSH_SEQUENCE];
+    NSInteger seq = 0;
+    if (seqNumber) {
+        seq = [seqNumber integerValue];
+    }
     [JPUSHService deleteAlias:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
-        if (iResCode == 0) {
-            callback(@{@"code": @0, @"message": @"success"});
-        } else {
-            callback(@{@"code": @(iResCode), @"message": @"failed"});
-        }
-    } seq:0];
+        NSDictionary *result = @{
+            JPUSH_CODE: @(iResCode),
+            JPUSH_SEQUENCE: @(seq),
+            JPUSH_ALIAS: iAlias?:@""
+        };
+//        callback(@{JPUSH_ALIAS_EVENT: result});
+        callback(result);
+    } seq:seq];
 }
 
 - (void)getAlias:(NSDictionary *)param withCallback:(WeAppNativePluginCallback)callback {
+    NSNumber *seqNumber = param[JPUSH_SEQUENCE];
+    NSInteger seq = 0;
+    if (seqNumber) {
+        seq = [seqNumber integerValue];
+    }
     [JPUSHService getAlias:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
-        if (iResCode == 0) {
-            callback(@{@"code": @0, @"alias": iAlias ?: @""});
-        } else {
-            callback(@{@"code": @(iResCode), @"message": @"failed"});
-        }
-    } seq:0];
+        NSDictionary *result = @{
+            JPUSH_CODE: @(iResCode),
+            JPUSH_SEQUENCE: @(seq),
+            JPUSH_ALIAS: iAlias?:@""
+        };
+//        callback(@{JPUSH_ALIAS_EVENT: result});
+        callback(result);
+    } seq:seq];
 }
 
 - (void)getRegistrationID:(NSDictionary *)param withCallback:(WeAppNativePluginCallback)callback {
@@ -247,40 +333,40 @@ WEAPP_EXPORT_PLUGIN_METHOD_ASYNC(openSettings, @selector(openSettings:withCallba
 
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
     NSDictionary *userInfo = notification.request.content.userInfo;
-    [self sendMiniPluginEvent:@{@"onNotificationArrived": userInfo}];
+    [self sendMiniPluginEvent:@{JPUSH_NOTIFICATION_ARRIVED_EVENT: userInfo}];
     completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
 }
 
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
     NSDictionary *userInfo = response.notification.request.content.userInfo;
-    [self sendMiniPluginEvent:@{@"onNotificationClicked": userInfo}];
+    [self sendMiniPluginEvent:@{JPUSH_NOTIFICATION_CLICK_EVENT: userInfo}];
     completionHandler();
 }
 
 #pragma mark - JPUSHInAppMessageDelegate
 
 - (void)jPushInAppMessageDidShow:(JPushInAppMessage *)message {
-    [self sendMiniPluginEvent:@{@"onInAppMessageShow": message.content}];
+    [self sendMiniPluginEvent:@{JPUSH_INAPP_MESSAGE_SHOW_EVENT: message.content}];
 }
 
 - (void)jPushInAppMessageDidClick:(JPushInAppMessage *)message {
-    [self sendMiniPluginEvent:@{@"onInAppMessageClick": message.content}];
+    [self sendMiniPluginEvent:@{JPUSH_INAPP_MESSAGE_CLICK_EVENT: message.content}];
 }
 
 #pragma mark - 自定义消息处理
 
 - (void)networkDidReceiveMessage:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
-    [self sendMiniPluginEvent:@{@"onCustomMessage": userInfo}];
+    [self sendMiniPluginEvent:@{JPUSH_CUSTOM_MESSAGE_EVENT: userInfo}];
 }
 
 #pragma mark - JPUSHNotiInMessageDelegate
 - (void)jPushNotiInMessageDidShowWithContent:(NSDictionary *)content {
-    [self sendMiniPluginEvent:@{@"onNotiInMessageShow": content}];
+    [self sendMiniPluginEvent:@{JPUSH_NOTI_IN_MESSAGE_SHOW_EVENT: content}];
 }
 
 - (void)jPushNotiInMessageDidClickWithContent:(NSDictionary *)content {
-    [self sendMiniPluginEvent:@{@"onNotiInMessageClick": content}];
+    [self sendMiniPluginEvent:@{JPUSH_NOTI_IN_MESSAGE_CLICK_EVENT: content}];
 }
 
 @end

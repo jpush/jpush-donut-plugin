@@ -39,7 +39,8 @@
     },
     "srcMiniprogramRoot": "miniprogram/",
     "simulatorPluginLibVersion": {
-        "wxextd2e17127608c3": "2.27.3"
+        "wxextd2e17127608c3": "2.27.3",
+        "wxext14566970e7e9f62": "3.6.5-36"
     },
     "appid": "wx543fa6aca84aaf68",
     "miniappPluginId": "wx324c7e239a81ad0f",

@@ -1,1 +1,5 @@
 ios/Pods
+android/plugin/build
+ios/mypluginbuild
+ios/resources
+android/.gradle

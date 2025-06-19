@@ -1,2 +1,0 @@
-com/enterprise/jpushdemo/BuildConfig.java
- com.enterprise.jpushdemo.BuildConfig

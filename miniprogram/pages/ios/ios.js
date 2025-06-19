@@ -134,6 +134,25 @@ Page({
     this.addLog('设置用户分群推送', '已设置')
   },
 
+  setCollectControl() {
+    const { myPlugin } = this.data
+    if (!myPlugin) {
+      this.addLog('设置数据收集控制', '插件未加载')
+      return
+    }
+    myPlugin.setCollectControl({
+      imei: true,    // 是否收集IMEI
+      imsi: false,   // 是否收集IMSI
+      mac: false,    // 是否收集MAC地址
+      ssid: true,    // 是否收集WiFi SSID
+      bssid: false,  // 是否收集WiFi BSSID
+      cell: true,    // 是否收集基站信息
+      wifi: true,     // 是否收集WiFi信息
+      gps: true      // 是否收集地理位置
+    })
+    this.addLog('设置数据收集控制', '已开启（包含隐私参数配置）')
+  },
+
   pageEnterTo() {
     const { myPlugin } = this.data
     if (!myPlugin) {

@@ -55,6 +55,7 @@ WEAPP_EXPORT_PLUGIN_METHOD_SYNC(setupJPush, @selector(setupJPush:))
 WEAPP_EXPORT_PLUGIN_METHOD_SYNC(setBadge, @selector(setBadge:))
 WEAPP_EXPORT_PLUGIN_METHOD_SYNC(setLogLevel, @selector(setLogLevel:))
 WEAPP_EXPORT_PLUGIN_METHOD_SYNC(setSmartPushEnable, @selector(setSmartPushEnable:))
+WEAPP_EXPORT_PLUGIN_METHOD_SYNC(setCollectControl, @selector(setCollectControl:))
 WEAPP_EXPORT_PLUGIN_METHOD_SYNC(pageEnterTo, @selector(pageEnterTo:))
 WEAPP_EXPORT_PLUGIN_METHOD_SYNC(pageLeave, @selector(pageLeave:))
 
@@ -147,6 +148,32 @@ WEAPP_EXPORT_PLUGIN_METHOD_ASYNC(openSettings, @selector(openSettings:withCallba
 - (void)setSmartPushEnable:(NSDictionary *)param {
     BOOL enable = [param[@"enable"] boolValue];
     [JPUSHService setSmartPushEnable:enable];
+}
+
+- (void)setCollectControl:(NSDictionary *)param {
+    JPushCollectControl *collectControl = [[JPushCollectControl alloc] init];
+    
+    NSNumber *ssid = param[@"ssid"];
+    if (ssid) {
+        collectControl.ssid = [ssid boolValue];
+    }
+    
+    NSNumber *bssid = param[@"bssid"];
+    if (bssid) {
+        collectControl.bssid = [bssid boolValue];
+    }
+    
+    NSNumber *cell = param[@"cell"];
+    if (cell) {
+        collectControl.cell = [cell boolValue];
+    }
+    
+    NSNumber *gps = param[@"gps"];
+    if (gps) {
+        collectControl.gps = [gps boolValue];
+    }
+    
+    [JPUSHService setCollectControl:collectControl];
 }
 
 - (void)pageEnterTo:(NSDictionary *)param {

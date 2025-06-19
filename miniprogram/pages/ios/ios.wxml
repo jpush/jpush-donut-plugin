@@ -27,6 +27,7 @@
           <button bindtap="setBadge" class="btn">设置角标</button>
           <button bindtap="setLogLevel" class="btn">设置日志级别</button>
           <button bindtap="setSmartPushEnable" class="btn">设置用户分群推送</button>
+          <button bindtap="setCollectControl" class="btn">隐私数据控制</button>
           <button bindtap="pageEnterTo" class="btn">进入页面</button>
           <button bindtap="pageLeave" class="btn">离开页面</button>
         </view>

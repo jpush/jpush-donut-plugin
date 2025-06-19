@@ -1,26 +1,17 @@
 package com.donut.wx324c7e239a81ad0f
 
-import com.tencent.luggage.wxa.SaaA.plugin.NativePluginMainProcessTask
-import kotlinx.android.parcel.Parcelize
-
 import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.nfc.Tag
 import android.os.Build
 import android.os.Parcel
 import android.util.Log
 import cn.jpush.android.api.*
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import com.tencent.ilink.dev.ota.IlinkOtaCallbackInterface
-import com.tencent.luggage.wxa.SaaA.plugin.AsyncJsApi
-import com.tencent.luggage.wxa.SaaA.plugin.NativePluginBase
-import com.tencent.luggage.wxa.SaaA.plugin.NativePluginInterface
-import com.tencent.luggage.wxa.SaaA.plugin.SyncJsApi
+import cn.jpush.android.data.JPushCollectControl
+import com.tencent.luggage.wxa.SaaA.plugin.*
+import kotlinx.android.parcel.Parcelize
 import org.json.JSONObject
-import java.lang.reflect.Type
 
 class MsgReceiver(private val nativePlugin: TestNativePlugin) : BroadcastReceiver() {
     private var TAG = "MessageReceiverManager.MsgReceiver"
@@ -106,6 +97,10 @@ class TestTask(private var valToSync1: String, private var valToSync2: String) :
             val jsonObject = if (valToSync2.isNotEmpty()) JSONObject(valToSync2) else null
             Log.d("MainProcess", "MainProcess - getAlias ${TestNativePluginApplication.applicationContext}");
             JPushMethod.getAlias(jsonObject)
+        } else if (valToSync1.equals("setCollectControl")) {
+            val jsonObject = JSONObject(valToSync2)
+            Log.d("MainProcess", "MainProcess - setCollectControl ${TestNativePluginApplication.applicationContext}");
+            JPushMethod.setCollectControl(jsonObject)
         }
 
         this.callback() // callback函数会同步主进程的task数据，并在子进程调用runInClientProcess
@@ -205,6 +200,42 @@ class JPushMethod {
         fun getAlias(data: JSONObject?) {
             val seq = data?.getInt(JConstants.SEQUENCE) ?: 0
             JPushInterface.getAlias(TestNativePluginApplication.applicationContext, seq);
+        }
+
+        fun setCollectControl(data: JSONObject?) {
+            
+            // 创建 JPushCollectControl 对象
+            val collectControl = JPushCollectControl.Builder()
+            // 设置隐私参数
+            data?.optBoolean("imei")?.let { imei ->
+                collectControl.imei(imei);
+            }
+            
+            data?.optBoolean("imsi")?.let { imsi ->
+                collectControl.imsi(imsi);
+            }
+            
+            data?.optBoolean("mac")?.let { mac ->
+                collectControl.mac(mac);
+            }
+            
+            data?.optBoolean("ssid")?.let { ssid ->
+                collectControl.ssid(ssid);
+            }
+            
+            data?.optBoolean("bssid")?.let { bssid ->
+                collectControl.bssid(bssid);
+            }
+            
+            data?.optBoolean("cell")?.let { cell ->
+                collectControl.cell(cell);
+            }
+            
+            data?.optBoolean("wifi")?.let { wifi ->
+                collectControl.wifi(wifi);
+            }
+            
+            JPushInterface.setCollectControl(TestNativePluginApplication.applicationContext, collectControl.build())
         }
     }
 }
@@ -380,6 +411,13 @@ class TestNativePlugin: NativePluginBase(), NativePluginInterface {
     fun getAlias(data: JSONObject?, activity: Activity) {
         val jsonString = data.toString()
         val testTask = TestTask("getAlias", jsonString)
+        testTask.execAsync()
+    }
+
+    @SyncJsApi(methodName = "setCollectControl")
+    fun setCollectControl(data: JSONObject?, activity: Activity) {
+        val jsonString = data.toString()
+        val testTask = TestTask("setCollectControl", jsonString)
         testTask.execAsync()
     }
 

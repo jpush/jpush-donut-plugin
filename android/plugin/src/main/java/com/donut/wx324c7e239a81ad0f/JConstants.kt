@@ -43,9 +43,9 @@ class JConstants {
         const val EXTRAS = "extras"
         const val ANDROID = "android" //透传所有消息字段
 
-        const val INAPPCLICKACTION = "inAppClickAction"
-        const val INAPPEXTRAS = "inAppExtras"
-        const val INAPPSHOWTARGET = "inAppShowTarget"
+        const val INAPPCLICKACTION = "action"
+        const val INAPPEXTRAS = "extras"
+        const val INAPPSHOWTARGET = "target"
 
         //消息事件类型
         const val NOTIFICATION_ARRIVED = "notificationArrived"

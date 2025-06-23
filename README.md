@@ -43,17 +43,8 @@
 ```json
   "mini-android": {
     "manifestPlaceholders": {
-      "JPUSH_PKGNAME": "你的包名",
       "JPUSH_APPKEY": "你的 appkey",
-      "JPUSH_CHANNEL": "developer-default",
-      "XIAOMI_APPKEY" : "MI-您的应用对应的小米的APPKEY",
-      "XIAOMI_APPID" : "MI-您的应用对应的小米的APPID",
-      "OPPO_APPKEY" : "OP-您的应用对应的OPPO的APPKEY",
-      "OPPO_APPID" : "OP-您的应用对应的OPPO的APPID",
-      "OPPO_APPSECRET": "OP-您的应用对应的OPPO的APPSECRET",
-      "VIVO_APPKEY" : "您的应用对应的VIVO的APPKEY",
-      "VIVO_APPID" : "您的应用对应的VIVO的APPID",
-      "HONOR_APPID" : "您的应用对应的Honor的APP ID"
+      "JPUSH_CHANNEL": "developer-default"
     }
   }
 ```

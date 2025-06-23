@@ -29,7 +29,7 @@
     {
       "open": true,
       "pluginId": "wx324c7e239a81ad0f",// 这是插件id，不可修改
-      "pluginVersion": "1.0.0"
+      "pluginVersion": "0.0.1"
     }
   ]
 }

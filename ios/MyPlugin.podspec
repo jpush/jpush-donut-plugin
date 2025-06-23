@@ -12,6 +12,6 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '11.0'
   
   # 引入 JPush SDK
-  spec.dependency 'JPush'
+  spec.dependency 'JPush', '5.7.0'
 
 end

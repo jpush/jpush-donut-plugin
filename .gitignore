@@ -1,6 +1,4 @@
-ios/Pods
 android/plugin/build
 android/app/build
 ios/mypluginbuild
-ios/resources
 android/.gradle

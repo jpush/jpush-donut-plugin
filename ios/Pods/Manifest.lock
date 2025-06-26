@@ -1,0 +1,27 @@
+PODS:
+  - JCore (5.0.2)
+  - JPush (5.6.1):
+    - JCore (>= 4.8.0)
+  - MyPlugin (1.0.0):
+    - JPush
+
+DEPENDENCIES:
+  - MyPlugin (from `.`)
+
+SPEC REPOS:
+  trunk:
+    - JCore
+    - JPush
+
+EXTERNAL SOURCES:
+  MyPlugin:
+    :path: "."
+
+SPEC CHECKSUMS:
+  JCore: 3effa468af29935edb53e6460ef81fd3c03ee1a8
+  JPush: fcd20c0b2d6d8206af63b8517fa2d11e0a83dc6b
+  MyPlugin: e16ddfd015b26d3c918138f4f7b2d4ffbb33bb30
+
+PODFILE CHECKSUM: bf16e43f4581a28f70c1abdbd59996623917ecfa
+
+COCOAPODS: 1.16.2

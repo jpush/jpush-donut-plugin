@@ -3,6 +3,15 @@
 
 ## 一、集成
 
+当前微信规定donut插件发布后不能给其他app使用。（直接使用插件id(wx324c7e239a81ad0f)集成，这种方式需要找微信工作人员加白名单使用。（不建议））
+
+请根据下面步骤来集成：
+
+1. 在多端应用中创建自己的donut插件。可以得到自己的donut插件id。
+2. 将极光的插件代码移到自己的自己插件工程中, 需要特别注意插件id修改。
+3. 构建插件产物,并上传。
+4. 在多端工程中,应用插件。
+
 ### 1. iOS 配置插件
 
 - 在微信开发者工具，前往`project.miniapp.json`，点击右上角切换到 json 模式，然后按照将下方内容添加`project.miniapp.json`
@@ -12,8 +21,8 @@
   "ios": [
     {
       "open": true,
-      "pluginId": "wx324c7e239a81ad0f",// 这是插件id，不可修改
-      "pluginVersion": "1.0.1" // 插件版本
+      "pluginId": "wx....",// 填自己创建的donut插件id
+      "pluginVersion": "1.0.1" // 填自己创建的donut插件版本号
     }
   ]
 ```
@@ -28,8 +37,8 @@
   "android": [
     {
       "open": true,
-      "pluginId": "wx324c7e239a81ad0f",// 这是插件id，不可修改
-      "pluginVersion": "1.0.1"
+      "pluginId": "wx....",// 填自己创建的donut插件id
+      "pluginVersion": "1.0.1" // 填自己创建的donut插件版本号
     }
   ]
 }
